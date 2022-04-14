@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Vue, Louis Blog">
-    <meta name="description" content="">
+    <meta name="keywords" content="axios, Louis Blog">
+    <meta name="description" content="axiosaxios是一个专注于网络请求的库！
+axios 的基本使用1.发起GET请求
+123456789101112axios(&amp;#123;    	//请求方式        method:&amp;#x27;GET&amp;#x27;,    	/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Vue | Louis Blog</title>
+    <title>axios | Louis Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Vue</h1>
+                    <h1 class="description center-align post-title">axios</h1>
                 </div>
             </div>
         </div>
@@ -463,7 +465,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><p>axios是一个专注于网络请求的库！</p>
+<h3 id="axios-的基本使用"><a href="#axios-的基本使用" class="headerlink" title="axios 的基本使用"></a>axios 的基本使用</h3><p>1.发起GET请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">    	<span class="comment">//请求方式</span></span><br><span class="line">        <span class="attr">method</span>:<span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">    	<span class="comment">//请求地址</span></span><br><span class="line">        <span class="attr">url</span>:<span class="string">&#x27;http://www.xxx.com&#x27;</span>,</span><br><span class="line">        <span class="comment">//url中的查询参数(GET)</span></span><br><span class="line">        <span class="attr">params</span>:&#123;</span><br><span class="line">            <span class="attr">id</span>:<span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">result</span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>2.发起POST请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;btnPost&quot;</span>&gt;</span>发起POST请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#btnPost&#x27;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">async</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//如果调用某个方法返回值是Promise实例，则前面可以添加await</span></span><br><span class="line">    <span class="comment">//await 只能用在被async &quot;修饰&quot;的方法中</span></span><br><span class="line">      <span class="keyword">const</span> &#123;data&#125;=<span class="keyword">await</span>  <span class="title function_">axios</span>(&#123;</span><br><span class="line">        <span class="attr">method</span>:<span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>:<span class="string">&#x27;http://www.liulongbin.top:3006/api/post&#x27;</span>,</span><br><span class="line">        <span class="attr">data</span>:&#123;</span><br><span class="line">            <span class="attr">name</span>:<span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">            <span class="attr">age</span>:<span class="number">20</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>3.axios.get 和axios.post</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;btnGET&quot;</span>&gt;</span>GET<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;btnPOST&quot;</span>&gt;</span>POST<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/body&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">(axios.<span class="property">get</span>的写法）</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#btnGET&#x27;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">async</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">       <span class="comment">/* axios.get(&#x27;url地址&#x27;,&#123;</span></span></span></span><br><span class="line"><span class="comment"><span class="language-javascript"><span class="language-xml">            //GET参数</span></span></span></span><br><span class="line"><span class="comment"><span class="language-javascript"><span class="language-xml">            params:&#123;&#125;</span></span></span></span><br><span class="line"><span class="comment"><span class="language-javascript"><span class="language-xml">        &#125;) */</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">const</span> &#123;<span class="attr">data</span>:res&#125; =<span class="keyword">await</span> axios.<span class="title function_">get</span>(<span class="string">&#x27;http://www.liulongbin.top:3006/api/getbooks&#x27;</span>,&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">            <span class="attr">params</span>:&#123;<span class="attr">id</span>:<span class="number">1</span>&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">(axios.<span class="property">post</span>的写法)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#btnPOST&#x27;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="keyword">async</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">/*axios.post(&#x27;url地址&#x27;,//POST参数&#123;&#125;)*/</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">const</span> &#123;<span class="attr">data</span>:res&#125;=<span class="keyword">await</span> axios.<span class="title function_">post</span>(<span class="string">&#x27;http://www.liulongbin.top:3006/api/post&#x27;</span>,&#123;<span class="attr">name</span>:<span class="string">&#x27;zs&#x27;</span>,<span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>&#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+
                 
             </div>
             <hr/>
@@ -489,7 +501,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/04/14/Vue/">http://example.com/2022/04/14/Vue/</a>
+                    <a href="http://example.com/2022/04/14/axios/">http://example.com/2022/04/14/axios/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -698,9 +710,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/04/14/axios/">
                     <div class="card-image">
@@ -718,9 +731,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -729,6 +742,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -739,13 +753,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/18/hello-world/">
+                <a href="/2022/04/14/Vue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Vue">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Vue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -756,7 +770,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-14
                             </span>
                         <span class="publish-author">
                             
